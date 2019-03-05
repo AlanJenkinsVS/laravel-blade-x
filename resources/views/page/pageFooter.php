@@ -1,3 +1,7 @@
+@php
+$form_btn_type = "warning";
+@endphp
+
 <footer class="bg-grey-lighter pt-2 pb-3 my-2">
   <div class="max-width-5 mx-auto">
     <button class="bg-light cursor-pointer p1 w-full flex justify-center items-center hidden" on="tap:header.scrollTo(duration=200)">
@@ -6,31 +10,28 @@
       </svg>
       Back to Top
     </button>
-    
+
     <div class="flex justify-between">
-    <div class="w-1/3 pl2">
-    <form action-xhr="/newsletter/index" target="_top" method="post" novalidate="" class="i-amphtml-form">
-    <div class="flex flex-column m0">
-      <label class="bold center text-left mr1 mt2 mb1" for="email_address" aria-label="Email Address">Subscribe for the latest offers by email</label>
+      <div class="w-1/3 pl2">
+
       
-      <div class="">
-        <div class="w-full flex flex-column flex-row">
-          <input id="email_address" type="email" placeholder="Enter Email Address..." class="border border-light mr2 py1 p2 rounded w-full">
-          <button name="subscribe" type="submit" class="flex-1 bg-black cursor-pointer m0 mt1 py1 p2 rounded text-white">Subscribe</button>
-        </div>
-      </div>
-    </div>
-  </form>
+        <vs-form-newsletter-subscription
+          action="/newsletter"
+          fieldName="email_address"
+          :submitBtnType="$form_btn_type"
+          submitText="Submit"
+        />
   
-  <p class="hidden mt3 block">Follow Us</p>
+
+        <p class="hidden mt3 block">Follow Us</p>
   
-  <div class="m2 m0 flex justify-between">
-    <a href="//twitter.com" class="circle p1 flex items-center bg-white hover:bg-black text-black hover:text-white">
-      <svg width="24" height="24">
-        <use href="#twitter" xlink:href="#twitter"></use>
-      </svg>
-      <span class="hide">Twitter</span>
-    </a>
+        <div class="m2 m0 flex justify-between">
+          <a href="//twitter.com" class="circle p1 flex items-center bg-white hover:bg-black text-black hover:text-white">
+            <svg width="24" height="24">
+              <use href="#twitter" xlink:href="#twitter"></use>
+            </svg>
+            <span class="hide">Twitter</span>
+          </a>
 
 <a href="//facebook.com" class="circle p1 flex items-center bg-white hover:bg-black text-black hover:text-white">
 <svg width="24" height="24">

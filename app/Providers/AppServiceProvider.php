@@ -39,6 +39,7 @@ class AppServiceProvider extends ServiceProvider
         BladeX::component('page.pageFooter');
         BladeX::component('page.pageFooterCopyright');
         BladeX::component('page.pageSlitherBanners');
+        BladeX::component('form.formNewsletterSubscription');
         BladeX::component('components.alert');
         BladeX::prefix('vs');
     }

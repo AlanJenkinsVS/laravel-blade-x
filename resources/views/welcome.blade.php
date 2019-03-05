@@ -7,7 +7,21 @@ $message = "This is my blade error message component";
 @endphp
 
 @section('content')
-    <vs-alert type="danger" :message="$message"></my-alert>
+<product-list url="/api/">
+    
+    <produc-tcard>
+        <head></head>
+
+        <img src="" alt="">
+
+        <price-rrp>
+        </price-rrp>
+    </produc-tcard>
+    
+</vs-dasbhoard>
+
+    <vs-alert type="danger">
+    </my-alert>
 
     <div class="title m-b-md">
         Laravel
